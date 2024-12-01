@@ -1,5 +1,4 @@
 #!/bin/bash
-#!/bin/bash
 
 # Exit on error
 set -e
@@ -20,7 +19,7 @@ fi
 
 # Step 2: Sync AOSP source
 echo "Syncing AOSP source..."
-repo sync --force-sync --no-tags --no-clone-bundle -j$THREADS
+repo sync -j$THREADS
 
 # Step 3: Clone Device-Specific Trees (adjust URLs for whyred)
 echo "Cloning device-specific repositories for whyred..."
